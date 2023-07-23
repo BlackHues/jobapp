@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<style>
+    body {
+    background-color: #f2f2f2;
+    }
+    h2 {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    form {
+    width: fit-content;
+    height: fit-content;
+    text-align: start;
+    background-color: lightgray;
+    padding: 50px;
+    border-radius: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 5px 5px 10px #130f0f;
+    }
+    label {
+    display: block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    button {
+    background-color: rgba(3, 102, 249, 0.992);
+    color: #000;
+    border-color: lightgray;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: 5px 5px 10px #130f0f;
+    border-color: #130f0f;
+    width: 100px;
+    }
+    button:hover {
+    background-color:rgba(3, 102, 249, 0.992);
+    color: black;
+    opacity: 0.8;
+    }
+    a{
+    padding-left: 10px;
+    }
+</style>
+</head>
+<body>
+    <center>
+        <div class="container-fluid">
+            <div class="token">
+                <h2>Employee Login</h2>
+                    <div class="input">
+                        <form  method="post">{% csrf_token %}
+                            <label for="email">Email :</label>
+                                <input type="email" id="email" name="email" placeholder="enter your email"><br><br>
+                            <label for="password">Password :</label>
+                                <input type="password" id="password" name="password" placeholder="enter your password"><br><br>
+
+                        <button type="submit">Login</button>
+                        <a href="http://127.0.0.1:8000/register/">register here</a>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

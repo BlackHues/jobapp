@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- necessary meta -->
+  <meta charset="UTF-8">
+  <!-- bootstrap cdn links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <title>Document</title>
+ </head>
+<style>
+ /* styles on navbar */ 
+ .navbar {
+            background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?w=1060&t=st=1688056448~exp=1688057048~hmac=c47034305d2944d5f8e24d146209a93576545733120b87a60cbea6d0893238f4);  
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+          } 
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        #logout {
+            position:absolute;
+            right: 0;
+        }
+
+        .card {
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 10px;
+            width:300px;
+            height: fit-content;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .card-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .card button {
+            padding: 5px 10px;
+            background-color: #fca311;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #e76f51;
+        }
+
+        #slot {
+            margin-top: 100px;
+        }
+        row {
+          padding: 100px
+        }
+</style>
+<body>
+  {% block content  %}
+
+  {% endblock content %} 
+
+  <!-- {% block footer %}
+  <p>Copyright © 2023  JobGuru</p>
+  {% endblock footer %} -->
+</body>
+</html>

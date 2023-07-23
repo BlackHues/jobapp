@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<center>
+<h1>Applied list</h1>
+
+</center>
+
+   
+        
+ <div class="container">
+<div class="row">
+{% for i,j in mylist %}
+   
+ 
+        <div class="col-4">
+        <div class="card">
+          <img src="https://img.freepik.com/free-vector/job-vacancy-background-with-chair-flat-style_23-2147875408.jpg?w=740&t=st=1689340888~exp=1689341488~hmac=69e6d3314e40370e2c41698b28c70967e0ef337e360e8939a449fc76d3854fbd" class="card-img-top" alt="...">
+          <div class="card-body">
+
+            <h2>Jobs Applied</h2>
+            <p>{{i}}</p>
+            <p>{{j}}</p>
+                      
+          </div>
+        </div>
+      </div>
+    
+        {% endfor %}                      
+       </div> 
+      </div>             
+      
+
+{% endblock content %}  

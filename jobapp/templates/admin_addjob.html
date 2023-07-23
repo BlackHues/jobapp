@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            width: 100px;
+            display: inline-block;
+            text-align: left;
+            padding: 10px;
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <form method="post">
+        {% csrf_token %}
+        
+        <label>
+            Company Name 
+            <input type="text" name="company_name">
+        </label><br>
+        <label>
+            Email
+            <input type="text" name="email">
+        </label><br>
+        <label>
+            Job Title
+            <input type="text" name="job_title">
+        </label><br>
+    
+        <label>
+            Work Type
+        </label>
+        <select name="work_type">
+            <option selected>Select work type</option>
+            <option value="rural">Rural</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="city">City</option>
+        </select>
+        <br>
+            
+
+        <label>
+            Experience
+            <input type="text" name="experience">
+        </label><br>
+
+        <label>
+            Job Type
+            <input type="text" name="job_type">
+        </label><br>
+        <input type="submit" value="Post job">
+            
+    </form>
+</center>
+</body>
+</html>

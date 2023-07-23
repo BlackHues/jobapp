@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+  <form method="post" action="/update/{{useredit.id}}">{% csrf_token %}
+    <table>
+      <tr><td>ID
+           <br><input name="rollno" value="{{useredit.rollno}}"></td></tr><br><br>
+      <tr><td>NAME
+           <br><input name="name" value="{{useredit.name}}"></td></tr><br><br></td></tr>
+      <tr><td>EMAIL
+           <br><input name="email" value="{{useredit.email}}"></td></tr><br><br>
+      <tr><td>BIRTHDAY
+           <br><input name="contact" value="{{useredit.birthday}}"></td></tr><br><br>
+        <tr><td>PHONE
+            <br><input name="contact" value="{{useredit.phone}}"></td></tr><br><br>
+        <tr><td>HIGHEST QUALIFICATION
+            <br><input name="contact" value="{{useredit.highest_qualification}}"></td></tr><br><br>
+
+    </table>
+    <center>
+      <button type="submit">UPDATE</button></td></tr><br><br>
+    </center>
+</body>
+</html>

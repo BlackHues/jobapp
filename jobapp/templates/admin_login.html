@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+
+    body {  
+      
+        background-color: #f2f2f2;
+        }
+
+
+        h2 {
+            text-align: center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: larger;
+        }
+
+    form {
+      
+        width: fit-content;
+        text-align: start;
+        background-color: lightgray;
+        padding: 50px;
+        border-radius: 25px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        box-shadow: 5px 5px 10px #130f0f;
+    }
+
+    label {
+        font-size: larger;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    input {
+        width: 350px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    button{
+        background-color: rgba(3, 102, 249, 0.992);
+        color: #000;
+        border-color: lightgray;
+        
+        text-align: center;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        padding: 10px;
+        box-shadow: 5px 5px 10px #130f0f;  
+    }
+
+    button:hover {
+        background-color:rgba(3, 102, 249, 0.992);
+        color: black;
+        opacity: 0.8;
+    
+        
+    }
+    a {
+        padding-right: 10px;
+    }
+
+</style>
+</head>
+<body>
+<center>
+    <h2>Admin Login</h2>
+<form class="login-form" method="post">
+    {% csrf_token %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info">
+       {{message}}
+    </div>
+    <li>
+        {% if message.tags %}
+        class="{[message.tags]}"
+        {% endif %}
+    </li>
+    {% endfor %}
+    {% endif %}
+    <label>
+        Username :
+    
+    </label><br><input type="text" name="uname" placeholder="username"><br>
+
+    <label>
+        Password : 
+   
+    </label><br> <input type="password" name="password" placeholder="password"><br>
+    
+    <button type="submit">Login</button>
+    <a href="http://127.0.0.1:8000/reg/">Register here</a>
+</form>
+</center>
+</body>
+</html>
